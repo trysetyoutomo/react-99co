@@ -1,0 +1,343 @@
+/* import fonts  */
+
+@font-face {
+  font-family: "AvenirNext";
+  src: url("/public/fonts/AvenirNext-Regular.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirNext";
+  src: url("/public/fonts/AvenirNext-DemiBold.woff") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirNext";
+  src: url("/public/fonts/AvenirNext-Bold.woff") format("truetype");
+  font-weight: bold;
+  font-display: swap;
+}
+
+
+/* variables declaration */
+
+:root{
+ --hijau:#4CB97F;
+ --base:#6845E1;
+ --gray:#E9EEF2;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url("/public/images/bg.png");
+  background-position: 0 0 ;
+  background-color: var(--base);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: AvenirNext;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+header{
+  margin-top: 2.5rem;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper{
+  display: flex;
+  margin-top: 5rem;
+}
+
+.wrapper .heading{
+  width: 60%;
+  color: white;
+}
+
+
+.heading-content{
+  margin:50px 50px;
+}
+
+.heading h1{
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.listing{
+  width:40%;
+  position: relative;
+  top: 20px;
+}
+
+.listing .arrows{
+  position: relative;
+  top: 50%;
+}
+
+.arrow{
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.arrows .arrow-left{
+  left: 0px;
+}
+
+.arrows .arrow-right {
+  right: 0px;
+}
+
+.arrow-container{
+  position: relative;
+  width: inherit;
+  height: inherit;
+}
+
+.arrow-container img{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 25px;
+  height: 25px;
+}
+
+
+.building{
+  border-radius: 10px;
+  background-color: white;
+  width: 350px;
+  height: auto;
+}
+
+.building .photo{
+  padding: 0.5em;
+}
+
+.price{
+font-size: large;
+}
+
+.building .photo img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.features ul{
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.features ul li{
+  display: inline; 
+  margin-left: 15px;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.features ul li span{
+  margin-left: 0.3rem;
+  position: relative;
+  bottom:4px;
+  font-weight: 300;
+}
+
+.features ul li:first-child{
+  margin-left: 0px;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.mx-auto{
+  margin:0 auto;
+}
+
+.transaction-negotiable, .transaction-type, .transaction-lovelist{
+  margin-left: 1rem;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+}
+
+.transaction-type:first-child{
+  margin-left: 0px;
+}
+
+.transaction-negotiable{
+  background-color: var(--hijau);
+  color: white;
+  border-radius: 16px;
+  padding: 0.3rem 1rem;
+}
+
+.transaction-type{
+  background-color: var(--gray);
+  color: rgb(65, 61, 61);
+}
+
+.transaction-lovelist{
+  float: right;
+  cursor: pointer;
+}
+
+.fw-bold{
+  font-weight: bold;
+}
+
+.building-content{
+  padding:0rem 1rem 1rem 1rem;
+}
+
+.credit{
+  font-size: 0.8rem;
+}
+
+.wrapper-btn{
+  position: relative;
+  margin: 0 auto;
+}
+
+.btn{
+  width: 100%;
+  background-color: var(--hijau);
+  color:white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.float-left{
+  float: left;
+}
+
+.float-right{
+  float: right;
+}
+
+.clear-both{
+  clear: both;
+}
+
+/* modal style */
+.modal{
+    z-index: 5;
+}
+.modal-backdrop{
+  background-color: rgb(65, 61, 61,0.7);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+.modal .building{
+  z-index: 10;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;;
+}
+
+
+.modal .building.large{
+  width: 40%;
+  height: 620px;
+  overflow-y: auto;
+}
+
+.modal .modal-body {
+  z-index: 10;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  border-radius: 10px;
+  width: 350px;
+  /* height: 450px; */
+  width: 40%;
+  height: auto;
+  /* max-height: 650px; */
+}
+
+.modal .modal-body .photo img{
+  max-height: 310px;  
+}
+
+.building  .building-name{
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.building .address {
+  font-size: 0.9rem;
+}
+
+.building-map.detail{
+  padding: 1rem;
+}
+.building-map .address {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
