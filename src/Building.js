@@ -38,7 +38,7 @@ class Building extends React.Component{
                     </div>
                     <div className="price">
                         <span className="price fw-bold">Rp. 326 juta </span>
-                        <span className="credit">Cicilan 2,61 juta / bulan</span>
+                        <span className="credit">Cicilan 2,61 juta/bln</span>
                     </div>
                     {   
                         vm.props.content === "detail" ?  vm.detailData(): ""

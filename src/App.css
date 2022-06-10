@@ -37,7 +37,7 @@
 
 body{
   background-image: url("/public/images/bg.png");
-  background-position: 0 0 ;
+  background-position: 0 -40px ;
   background-color: var(--base);
   background-repeat: no-repeat;
   background-size: cover;
@@ -84,7 +84,7 @@ header{
 }
 
 .container{
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -116,14 +116,14 @@ header{
 
 .listing .arrows{
   position: relative;
-  top: 50%;
+  top: 45%;
 }
 
 .arrow{
   cursor: pointer;
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   background-color: white;
   border-radius: 50%;
 }
@@ -183,6 +183,13 @@ font-size: large;
   display: inline; 
   margin-left: 15px;
   font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.modal-body .features ul li {
+  display: inline;
+  margin-left: 15px;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -252,11 +259,18 @@ font-size: large;
   margin: 0 auto;
 }
 
+/* .modal-body .wrapper-btn{
+  position: absolute;
+  margin: 0 auto;
+  bottom: 10px;
+  width: 100%; */
+/* } */
+
 .btn{
   width: 100%;
   background-color: var(--hijau);
   color:white;
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
   border: none;
   border-radius: 0.2rem;
   cursor: pointer;
@@ -331,13 +345,18 @@ font-size: large;
 }
 
 .building .address {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 .building-map.detail{
   padding: 1rem;
 }
+
 .building-map .address {
   font-size: 1.3rem;
   font-weight: 600;
+}
+
+.building-map .address-detail {
+  font-size: 0.8rem; 
 }
